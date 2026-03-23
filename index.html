@@ -1,93 +1,192 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dostluk Anıları</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dostlark-rathanesi | Elveda</title>
+    <style>
+        :root {
+            --primary: #ffcc00;
+            --secondary: #e94560;
+            --bg: #0f0f1b;
+            --card-bg: #16213e;
+            --accent: #533483;
+        }
+        body {
+            background: radial-gradient(circle, #1a1a2e 0%, #05050a 100%);
+            color: white;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .header {
+            text-align: center;
+            padding: 50px 0;
+        }
+        .header h1 {
+            font-size: 3.5rem;
+            color: var(--primary);
+            text-shadow: 5px 5px 0px #000;
+            margin: 0;
+            letter-spacing: 2px;
+        }
+        .header p {
+            font-size: 1.3rem;
+            color: #aaa;
+            font-style: italic;
+        }
+        .container {
+            max-width: 900px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            width: 100%;
+            margin-bottom: 50px;
+        }
+        .card {
+            background: var(--card-bg);
+            border: 2px solid var(--accent);
+            border-radius: 25px;
+            overflow: hidden;
+            transition: 0.4s;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+        }
+        .card:hover {
+            border-color: var(--primary);
+            transform: scale(1.02);
+        }
+        .card-header {
+            background: var(--accent);
+            padding: 12px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 1.4rem;
+        }
+        .card img {
+            width: 100%;
+            height: auto;
+            filter: grayscale(20%);
+        }
+        .stats-box { padding: 20px; }
+        .stat-item {
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+            padding: 10px 0;
+        }
+        .stat-label { color: var(--primary); }
 
-<style>
-body{
-margin:0;
-font-family:Arial;
-background:#0f0f0f;
-color:white;
-}
-
-header{
-text-align:center;
-padding:30px;
-font-size:30px;
-background:#1a1a1a;
-}
-
-.container{
-padding:20px;
-max-width:900px;
-margin:auto;
-}
-
-.card{
-background:#1c1c1c;
-border-radius:15px;
-overflow:hidden;
-margin-bottom:25px;
-transition:0.3s;
-}
-
-.card:hover{
-transform:scale(1.02);
-}
-
-.card img{
-width:100%;
-}
-
-.text{
-padding:15px;
-}
-
-.date{
-color:gray;
-font-size:13px;
-}
-
-footer{
-text-align:center;
-padding:20px;
-color:gray;
-}
-</style>
+        /* ANILAR BÖLÜMÜ */
+        .timeline {
+            width: 100%;
+            max-width: 800px;
+            background: rgba(0, 0, 0, 0.4);
+            padding: 40px;
+            border-radius: 30px;
+            border-left: 4px solid var(--secondary);
+            margin-bottom: 50px;
+        }
+        .timeline-h {
+            color: var(--secondary);
+            font-size: 2rem;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+        }
+        .event {
+            position: relative;
+            margin-bottom: 40px;
+            padding-left: 20px;
+        }
+        .event::before {
+            content: '';
+            position: absolute;
+            left: -48px;
+            top: 5px;
+            width: 12px;
+            height: 12px;
+            background: var(--secondary);
+            border: 4px solid #1a1a2e;
+            border-radius: 50%;
+        }
+        .event-date {
+            font-weight: bold;
+            color: var(--primary);
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+        }
+        .event-desc {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #ddd;
+        }
+        .final-note {
+            color: #e94560 !important;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+    </style>
 </head>
-
 <body>
 
-<header>
-3 Yıllık Dostluk
-</header>
+    <div class="header">
+        <h1>DOSTLAR-RATHANESİ</h1>
+        <p>"Bir devrin sonu, bir dostluğun baki kalışı..."</p>
+    </div>
 
-<div class="container">
+    <div class="container">
+        <div class="card">
+            <div class="card-header">RzX | Ati242 🚀</div>
+            <img src="img2.jpg.PNG" alt="Ati242">
+            <div class="stats-box">
+                <div class="stat-item"><span class="stat-label">Kupa:</span> <span>88,007</span></div>
+                <div class="stat-item"><span class="stat-label">Durum:</span> <span>Emekli Efsane</span></div>
+            </div>
+        </div>
 
-<div class="card">
-<img src="IMG_5673.png">
-<div class="text">
-<div class="date">23 Şubat 2025</div>
-Bu bizim en iyi anılarımızdan biri.
-</div>
-</div>
+        <div class="card">
+            <div class="card-header">✨ BerfinGOD 💖</div>
+            <img src="img1.jpg.PNG" alt="Berfin">
+            <div class="stats-box">
+                <div class="stat-item"><span class="stat-label">Kupa:</span> <span>34,886</span></div>
+                <div class="stat-item"><span class="stat-label">Yol Arkadaşı:</span> <span>Daimi</span></div>
+            </div>
+        </div>
+    </div>
 
-<div class="card">
-<img src="IMG_5675.png">
-<div class="text">
-<div class="date">15 Aralık 2024</div>
-Beraber geçirdiğimiz güzel zamanlar.
-</div>
-</div>
+    <div class="timeline">
+        <h2 class="timeline-h">Zaman Tüneli</h2>
 
-</div>
+        <div class="event">
+            <div class="event-date">15 Aralık 2024</div>
+            <div class="event-desc">
+                <strong>Berfin ile Tanışma Günü.</strong> ✨ <br>
+                Her şeyin başladığı o özel an. Dostlark-rathanesi'nin ilk adımı burada atıldı.
+            </div>
+        </div>
 
-<footer>
-Anı sitesi
-</footer>
+        <div class="event">
+            <div class="event-date">23 Şubat 2025</div>
+            <div class="event-desc">
+                <strong>Zirve Noktası.</strong> 🏆 <br>
+                88.000 kupa ile Brawl Stars dünyasında imkansız denilen başarılar elde edildi.
+            </div>
+        </div>
+
+        <div class="event">
+            <div class="event-date">12 Mart 2025</div>
+            <div class="event-desc final-note">
+                <strong>Oyun Benim İçin Bitmiştir.</strong> ⛔ <br>
+                Bir devir kapandı. Artık arenalarda değil, hatıralarda yaşama vakti. Bu tarih, oyunun vedasıdır.
+            </div>
+        </div>
+    </div>
+
+    <div style="color: #444; margin-bottom: 50px;">© 2025 Dostlark-rathanesi Archive</div>
 
 </body>
 </html>
+
